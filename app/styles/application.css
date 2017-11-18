@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, system, sans-serif;
+}
+body {
+  background-color: whitesmoke;
+  font-size: 150%;
+}
+
+.recipe {
+  border: 1px solid silver;
+  width: 100%;
+  padding: 1em;
+  background: white;
+  position: relative;
+  margin: 1em 0;
+  cursor: pointer;
+}
+.recipe:hover {
+  background: #f4f7d4;
+}
+.recipe:hover .x-btn {
+  color: white;
+  background-color: #cc0000;
+}
+.recipe h2 {
+  font-size: 1em; margin: 0; margin-bottom: 0.5em;
+}
+.recipe .x-btn {
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  font-size: 1.4em; line-height: 1.5em;
+  width: 1.5em; height: 1.5em;
+  text-align: center;
+  border-radius: 50%;
+  background: white;
+  color: silver;
+  border: 1px solid silver;
+}
