@@ -2,9 +2,7 @@ import Mn from 'backbone.marionette'
 import {RecipeModel} from '../../models/recipe_model'
 import {IndeegriendModel} from '../../models/indeegriend_model'
 import {IndeegriendCollectionView} from '../indeegriends'
-<<<<<<< Updated upstream
 import {StepsCollectionView} from '../steps'
-=======
 import _ from 'lodash'
 
 let stars = [
@@ -15,17 +13,21 @@ let stars = [
          "&#x2605 &#x2605 &#x2605 &#x2605 &#x2606",
          "&#x2605 &#x2605 &#x2605 &#x2605 &#x2605",
       ]
->>>>>>> Stashed changes
 
 let RecipeView = Mn.View.extend({
   template: ctx => `<div class="modal-recipe">
-                    <h2>${ctx.name}</h2>
-                    <h3>${ctx.description}</h3><h3>${stars[ctx.rating]}</h3>
                     <div class="x-btn">×</div>
-                    <h2>Ingredients</h2>
-                    <div class="ingredients"></div>
-                    <div class="steps"></div>
-                    </div>`,
+                    <div class="wrapper">
+                      <h2>${ctx.name}</h2>
+                      <p>${ctx.description}</p>
+                      <div>${stars[ctx.rating]}</div>
+                    </div>
+                      <div class="ingredients"></div>
+                      <div class="steps-img">
+                        <img src="${ctx.imgPath}">
+                        <div class="steps"></div>
+                      </div>
+                  </div>`,
 
   regions: {
     ingredients: '.ingredients',

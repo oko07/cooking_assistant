@@ -4,50 +4,43 @@ import {buildCollection} from '../../utils'
 import {IndeegriendModel} from '../../models/indeegriend_model'
 
 let MOCK_INDEEGRIENDS_COLLECTION = [{
-  name: 'Jajko',
+  name: ' filetu z kurczaka',
+  how_much: '250 g',
+  status: 'false'
+}, {
+  name: 'cebula',
+  how_much: '1',
+  status: 'false'
+}, {
+  name: 'ząbek czosnku',
   how_much: '2',
   status: 'false'
 }, {
-  name: 'Cukier puder',
-  how_much: '200 g',
+  name: 'kukurydza',
+  how_much: '1',
   status: 'false'
 }, {
-  name: 'Olej roślinny',
-  how_much: '150 ml',
+  name: 'czerwona papryka',
+  how_much: '1',
   status: 'false'
 }, {
-  name: 'Drobno starta marchewka',
-  how_much: '200 g',
+  name: 'cukinia',
+  how_much: '300g',
   status: 'false'
 }, {
-  name: 'Drogno pokrojony ananas',
-  how_much: '75 g',
+  name: 'pomidory',
+  how_much: '4',
   status: 'false'
 }, {
-  name: 'Wiórka kokosowe',
-  how_much: '50 g',
-  status: 'false'
-}, {
-  name: 'Mąka',
-  how_much: '200 g',
-  status: 'false'
-}, {
-  name: 'Proszek do pieczenia',
-  how_much: '0.5 łyżeczki',
-  status: 'false'
-}, {
-  name: 'Soda',
-  how_much: '1 łyżeczka',
-  status: 'false'
-}, {
-  name: 'Cynamon',
-  how_much: '1 łyżeczka',
+  name: 'bulion drobiowy',
+  how_much: '1/2 szklanki',
   status: 'false'
 }]
 
+
 let IndeegriendRowView = Mn.View.extend({
   template: ind => `
-    <div class="indeegriends"><input type="checkbox">${ind.how_much} ${ind.name}</br></div>
+    <div class="indeegriends"><input type="checkbox"><b>${ind.how_much}</b> ${ind.name}</br></div>
   `
 })
 

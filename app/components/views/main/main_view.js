@@ -6,7 +6,7 @@ import {RecipeView} from '../recipe'
 
 let MainView = Marionette.View.extend({
   template: ctx => `
-  <h1>Kulinarny Asystent v. 0.0.1</h1>
+  <h1>Kulinarny Asystent</h1>
   <div id="menu"></div>
   <div id="activeRecipe"></div>
   `,
