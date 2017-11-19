@@ -21,11 +21,18 @@ let MOCK_STEPS_COLLECTION = [{
 let StepsView = Mn.View.extend({
   template: ctx => `
     <div class="step-wrapper ${ctx.visible ? '' : 'hide'}">
-      <div class="step">${ctx.description}</div>
-      <div class="step">${ctx.timer ? ctx.timer : ''}</div>
-      <div class="step">${ctx.reminders ? ctx.reminders : ''}</div>
+      <div class="desc">${ctx.description}</div>
+      <div class="timer">${ctx.timer ? ctx.timer : ''}</div>
+      <div class="reminder">${ctx.reminders ? ctx.reminders : ''}</div>
+      <div class="next">❯</div>
+      <div class="prev">❮</div>
     </div>
   `,
+
+  triggers: {
+    'click .next': 'next:click',
+    'click .prev': 'prev:click'
+  }
 })
 
 let StepsCollectionView = Mn.CollectionView.extend({

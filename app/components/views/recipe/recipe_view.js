@@ -34,6 +34,13 @@ let RecipeView = Mn.View.extend({
   triggers: {
     'click .x-btn': 'xbtn:clicked'
   },
+  onChildviewNextClick (stepView) {
+    stepView.model.set('status', 'hide')
+    let stepsCollection = this.getChildView('steps').collection
+    stepsCollection.findWhere('numer', )
+  },
+  onChildviewPrevClick () {
+  },
   initialize (model){
     this.model = new RecipeModel()
     this.model.set(model.attributes)

@@ -8,14 +8,17 @@ let MOCK_RECIPE_COLLECTION = [{
   name: 'Ciasto Marchewkowe',
   description: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.',
   rating: 2
+  imgPath: 'app/assets/DSC_1163 - Kopia.JPG'
 }, {
   name: 'Zupa gulaszowa',
   description: 'Maecenas malesuada elit lectus felis.',
   rating: 3
+  imgPath: 'app/assets/grzyby_po_mazursku11.jpg'
 }, {
   name: 'Barszcz czerwony z uszkami i majerankiem',
   description: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac.',
   rating: 5
+  imgPath: 'app/assets/IMG_4601.JPG'
 }]
 
 let RecipeRowView = Mn.View.extend({
