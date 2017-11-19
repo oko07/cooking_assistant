@@ -3,30 +3,28 @@ import {StepsModel} from '../../models/steps_model'
 import {buildCollection} from '../../utils'
 
 let MOCK_STEPS_COLLECTION = [{
-  description: 'Oh hi Mark',
-  timer: 90,
+  description: 'Włóż torebkę z herbatą',
   numer: 1,
-  reminders: 3,
   visible: true
 }, {
-  description: 'Oh hi Mark',
+  description: 'Ugotuj wodę',
   timer: 90,
   numer: 2,
   reminders: 3,
   visible: false
 }, {
-  description: 'Oh hi Mark',
-  timer: 90,
+  description: 'Zalej herbatę',
   numer: 3,
-  reminders: 3,
   visible: false
 }]
 
 let StepsView = Mn.View.extend({
   template: ctx => `
-    <div class="step ${ctx.visible ? '' : 'hide'}">${ctx.description}</div>
-    <div class="step ${ctx.visible ? '' : 'hide'}">${ctx.timer}</div>
-    <div class="step ${ctx.visible ? '' : 'hide'}">${ctx.reminders}</div>
+    <div class="step-wrapper ${ctx.visible ? '' : 'hide'}">
+      <div class="step">${ctx.description}</div>
+      <div class="step">${ctx.timer ? ctx.timer : ''}</div>
+      <div class="step">${ctx.reminders ? ctx.reminders : ''}</div>
+    </div>
   `,
 })
 
