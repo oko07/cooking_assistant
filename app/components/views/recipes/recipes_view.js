@@ -35,7 +35,6 @@ let RecipeRowView = Mn.View.extend({
 let RecipesCollectionView = Mn.CollectionView.extend({
   initialize () {
     this.collection = buildCollection(MOCK_RECIPE_COLLECTION)
-    console.log('hehe', buildCollection(MOCK_RECIPE_COLLECTION))
   },
   childView: RecipeRowView
 })

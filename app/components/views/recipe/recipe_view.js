@@ -5,7 +5,7 @@ import {IndeegriendCollectionView} from '../indeegriends'
 import {StepsCollectionView} from '../steps'
 
 let RecipeView = Mn.View.extend({
-  template: ctx => `<div class="recipe">
+  template: ctx => `<div class="modal-recipe">
                     <h2>${ctx.name}</h2>
                     <h3>${ctx.description}</h3><h3>${ctx.rating}</h3>
                     <div class="x-btn">×</div>
