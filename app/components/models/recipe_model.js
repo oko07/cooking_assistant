@@ -4,7 +4,8 @@ let RecipeModel = Bb.Model.extend({
   defaults: {
     name: '',
     description: '',
-    steps: []
+    steps: [],
+    rating: ''
   }
 })
 
