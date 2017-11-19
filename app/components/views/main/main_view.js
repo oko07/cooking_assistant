@@ -17,12 +17,13 @@ let MainView = Marionette.View.extend({
   events: {
     'recipe:active': 'onRecipeAcive'
   },
-  onRecipeAcive (options) {
-    //this.showChildView('activeRecipe', new RecipeView(options))
+  onChildviewRecipeClicked (recipeView) {
+    this.showChildView('activeRecipe', new RecipeView(recipeView.model))
+  //console.log(options);
   },
   onRender () {
     this.showChildView('menu', new RecipesCollectionView())
-    this.showChildView('activeRecipe', new RecipeView())
+    //this.showChildView('activeRecipe', new RecipeView())
   },
 
   initialize () {

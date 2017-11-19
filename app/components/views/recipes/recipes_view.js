@@ -21,8 +21,16 @@ let MOCK_RECIPE_COLLECTION = [{
 let RecipeRowView = Mn.View.extend({
   template: ctx => `
     <div class="recipe"><h2>${ctx.name}</h2> ${ctx.description}<div class="x-btn">×</div></div>
-  `
+  `,
+
+
+  triggers: {
+    'click': 'recipe:clicked'
+  },
+  onRecipeClicked () {
+  }
 })
+
 
 let RecipesCollectionView = Mn.CollectionView.extend({
   initialize () {

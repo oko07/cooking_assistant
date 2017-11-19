@@ -2,13 +2,24 @@ import Mn from 'backbone.marionette'
 import {RecipeModel} from '../../models/recipe_model'
 
 let RecipeView = Mn.View.extend({
-  template: ctx => `<div class="recipe">${ctx.name}${ctx.description}</div>`,
+  template: ctx => `<div class="recipe">
+                    <h2>${ctx.name}</h2>
+                    <h3>${ctx.description}</h3><h3>${ctx.rating}</h3>
+                    <h2>Ingredients</h2>
+                    <div class="ingredients"></div>
+                    <div class="steps"></div>
+                    </div>`,
 
-  initialize (){
+  regions: {
+    ingredients: '#ingredients',
+    steps: '#steps'
+  },
+
+  initialize (model){
     this.model = new RecipeModel()
-    this.model.set('name', 'potrawka Snafa')
-    this.model.set('description', 'Najlepsza potrawka')
-    console.log(this.model);
+    this.model.set(model.attributes)
+
+
   }
 })
 
