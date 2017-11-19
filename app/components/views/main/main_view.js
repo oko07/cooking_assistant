@@ -19,14 +19,12 @@ let MainView = Marionette.View.extend({
   },
   onChildviewRecipeClicked (recipeView) {
     this.showChildView('activeRecipe', new RecipeView(recipeView.model))
-  //console.log(options);
   },
   onChildviewXbtnClicked (recipeView){
     recipeView.destroy()
   },
   onRender () {
     this.showChildView('menu', new RecipesCollectionView())
-    //this.showChildView('activeRecipe', new RecipeView())
   },
 
   initialize () {

@@ -7,6 +7,10 @@ body {
   font-size: 150%;
 }
 
+.hide {
+  display: none;
+}
+
 .recipe {
   border: 1px solid silver;
   width: 100%;

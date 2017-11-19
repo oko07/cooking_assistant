@@ -2,6 +2,7 @@ import Mn from 'backbone.marionette'
 import {RecipeModel} from '../../models/recipe_model'
 import {IndeegriendModel} from '../../models/indeegriend_model'
 import {IndeegriendCollectionView} from '../indeegriends'
+import {StepsCollectionView} from '../steps'
 
 let RecipeView = Mn.View.extend({
   template: ctx => `<div class="recipe">
@@ -24,10 +25,9 @@ let RecipeView = Mn.View.extend({
     this.model = new RecipeModel()
     this.model.set(model.attributes)
 
-
   },
-
   onRender () {
+    this.showChildView('steps', new StepsCollectionView())
     this.showChildView('ingredients', new IndeegriendCollectionView())
   }
 
