@@ -7,15 +7,15 @@ let MOCK_RECIPE_COLLECTION = [{
   id: 1,
   name: 'Ciasto Marchewkowe',
   description: 'Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis.',
-  rate: 5
+  rating: 2
 }, {
   name: 'Zupa gulaszowa',
   description: 'Maecenas malesuada elit lectus felis.',
-  rate: 5
+  rating: 3
 }, {
   name: 'Barszcz czerwony z uszkami i majerankiem',
   description: 'Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac.',
-  rate: 5
+  rating: 5
 }]
 
 let RecipeRowView = Mn.View.extend({
